@@ -1,0 +1,144 @@
+:root {
+  --mainFont: "Karla", sans-serif;
+  --mainBackground: rgba(167, 181, 201, 0.429);
+  --borderColor: #D5D4D8;
+  --headerBackground: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+  --buttonBackground: linear-gradient(90deg, #057290 0%, #000851 100%);
+  --uploadBackground: linear-gradient(90deg, #000851 0%, #057290 100%);
+  --downloadBackground: linear-gradient(90deg, #412ad3 0%, #000851 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--mainFont);
+  background: var(--mainBackground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  padding: 36px;
+}
+
+
+/* Header styling */
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  background: var(--headerBackground);
+  color: white;
+  padding: 20px;
+}
+
+.header-img {
+  height: 150%;
+  margin-right: 6px;
+}
+
+.header-title {
+  font-size: 1.25rem; 
+  margin-right: auto;
+}
+
+.header-react {
+  font-size: 0.75rem; 
+  font-weight: 500;
+}
+/* End of header styling */
+
+/* Form styling */
+.form {
+  display: grid;
+  /* rows / columns */
+  grid-template: 40px 40px / 1fr 1fr; 
+  gap: 17px;
+  margin-bottom: 17px;
+}
+
+.form-input {
+  font-family: var(--mainFont);
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  text-indent: 5px;
+}
+
+.form-btn {
+  /* goes from middle to end */
+  grid-column: 2 / -1; 
+  font-family: var(--mainFont);
+  border-radius: 5px;
+  background: var(--buttonBackground);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.upload-btn {
+  grid-column: 1 / 2;
+  background: var(--uploadBackground);
+}
+/* End of form styling */
+
+/* Meme styling */
+.meme {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meme-img {
+  max-width: 50vw;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.meme-text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 2px 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.top {
+  top: 0;
+}
+
+/* End of Meme styling */
+
+.download-btn {
+  margin-top: 10px;
+  height: fit-content;
+  padding: 5px 7px;
+  background: var(--downloadBackground);
+}
